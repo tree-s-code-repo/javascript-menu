@@ -1,5 +1,0 @@
-class MenuController {
-  constructor() {}
-
-  getInput() {}
-}
