@@ -1,8 +1,8 @@
-import { Random } from "@woowacourse/mission-utils";
-
+import RecommendController from "./controllers/RecommendController.js";
 class App {
   play() {
-    console.log(Random);
+    const recommendController = new RecommendController();
+    // recommendController.start();
   }
 }
 
