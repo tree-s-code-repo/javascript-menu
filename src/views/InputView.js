@@ -1,11 +1,15 @@
 import { Console } from "@woowacourse/mission-utils";
 
 class InputView {
-  readCoachName(callback) {
-    Console.readLine("코치의 이름을 입력해 주세요. (, 로 구분)", callback);
+  async readCoachName() {
+    return await Console.readLineAsync(
+      "코치의 이름을 입력해 주세요. (, 로 구분)"
+    );
   }
-  readAntiFood(name, callback) {
-    Console.readLine(`${name}(이)가 못 먹는 메뉴를 입력해 주세요.`, callback);
+  async readAntiFood(name) {
+    return await Console.readLineAsync(
+      `${name}(이)가 못 먹는 메뉴를 입력해 주세요.`
+    );
   }
 }
 
