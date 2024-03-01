@@ -1,6 +1,8 @@
 import InputView from "../views/InputView.js";
 import Coach from "../models/Coach.js";
 import Recommend from "../models/Recommend.js";
+import Menu from "../models/Menu.js";
+
 class RecommendController {
   #coachs;
   #recommand;
@@ -11,6 +13,7 @@ class RecommendController {
     const coachNames = await this.promptCoachNames();
     const coachs = await this.getHateMenus(coachNames);
     this.setRecommend(coachs);
+    this.#recommand.drawMenu(new Menu());
   }
 
   async promptCoachNames() {
@@ -33,7 +36,6 @@ class RecommendController {
 
   setRecommend(coachs) {
     this.#recommand = new Recommend(coachs);
-    this.#recommand.drawMenu();
   }
 }
 
