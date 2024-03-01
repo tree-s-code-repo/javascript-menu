@@ -1,7 +1,10 @@
+import InputView from "../views/InputView.js";
+
 class RecommendController {
   constructor() {}
-  start() {
-    console.log("start");
+
+  async start() {
+    const coachNames = await InputView.readCoachName();
   }
 }
 
